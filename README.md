@@ -1,11 +1,3 @@
-[![Live example](https://img.shields.io/badge/live%20example-https%3A%2F%2Fminimal--fastapi--postgres--template.rafsaf.pl-blueviolet)](https://minimal-fastapi-postgres-template.rafsaf.pl/)
-[![License](https://img.shields.io/github/license/rafsaf/minimal-fastapi-postgres-template)](https://github.com/rafsaf/minimal-fastapi-postgres-template/blob/main/LICENSE)
-[![Python 3.13](https://img.shields.io/badge/python-3.13-blue)](https://docs.python.org/3/whatsnew/3.13.html)
-[![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
-[![Tests](https://github.com/rafsaf/minimal-fastapi-postgres-template/actions/workflows/tests.yml/badge.svg)](https://github.com/rafsaf/minimal-fastapi-postgres-template/actions/workflows/tests.yml)
-
-_Check out online example: https://minimal-fastapi-postgres-template.rafsaf.pl, it's 100% code used in template (docker image) with added my domain and https only._
-
 # Minimal async FastAPI + PostgreSQL template
 
 - [Minimal async FastAPI + PostgreSQL template](#minimal-async-fastapi--postgresql-template)
@@ -42,12 +34,6 @@ _Check out online example: https://minimal-fastapi-postgres-template.rafsaf.pl, 
 - [x] Perfect pytest asynchronous test setup with +40 tests and full coverage
 
 <br>
-
-
-
-<kbd>![template-fastapi-minimal-openapi-example](https://drive.google.com/uc?export=view&id=1rIXFJK8VyVrV7v4qgtPFryDd5FQrb4gr)</kbd>
-
-
 
 ## Quickstart
 
@@ -115,22 +101,6 @@ pip install pytest-asyncio
 pytest
 
 ```
-
-<br>
-
-## About
-
-This project is heavily based on the official template https://github.com/tiangolo/full-stack-fastapi-postgresql (and on my previous work: [link1](https://github.com/rafsaf/fastapi-plan), [link2](https://github.com/rafsaf/docker-fastapi-projects)), but as it now not too much up-to-date, it is much easier to create new one than change official. I didn't like some of conventions over there also (`crud` and `db` folders for example or `schemas` with bunch of files). This template aims to be as much up-to-date as possible, using only newest python versions and libraries versions.
-
-`2.0` style SQLAlchemy API is good enough so there is no need to write everything in `crud` and waste our time... The `core` folder was also rewritten. There is great base for writting tests in `tests`, but I didn't want to write hundreds of them, I noticed that usually after changes in the structure of the project, auto tests are useless and you have to write them from scratch anyway (delete old ones...), hence less than more. Similarly with the `User` model, it is very modest, with just `id` (uuid), `email` and `password_hash`, because it will be adapted to the project anyway.
-
-2024 update:
-
-The template was adpoted to my current style and knowledge, the test based expanded to cover more, added mypy, ruff and test setup was completly rewritten to have three things:
-
-- run test in paraller in many processes for speed 
-- transactions rollback after every test
-- create test databases instead of having another in docker-compose.yml
 
 <br>
 

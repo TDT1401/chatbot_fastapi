@@ -10,7 +10,6 @@ from app.core.config import get_settings
 app = FastAPI(
     title="minimal fastapi postgres template",
     version="6.1.0",
-    description="https://github.com/rafsaf/minimal-fastapi-postgres-template",
     openapi_url="/openapi.json",
     docs_url="/",
 )
